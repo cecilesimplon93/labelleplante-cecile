@@ -1,0 +1,37 @@
+<div class="d-flex align-items-stretch">
+    <app-filter-side-bar [listCategories]="listCategoriesFilter"> </app-filter-side-bar>
+
+
+    <div class="custom-main container p-3">
+        <input class="form-control" 
+        type="text" 
+        placeholder="Recherche ta belle plante"
+        aria-label="INPUT recherche ta belle plante">
+
+        <div class="py-3">
+            Trier par :
+            <button class="btn-outline-success bts-sm me-2">Prix</button>
+            <button class="btn-outline-success bts-sm me-2">Ordre alphét</button>
+            <button class="btn-outline-success bts-sm me-2">Avis</button>
+
+        </div>
+<div class="row">
+<div class="col"  *ngFor="let product of listData" >
+
+    <app-card-plante [plant]="product"></app-card-plante>
+
+</div>
+
+</div>
+        
+    </div>
+</div>
+<!--
+<div class="card" style="width: 14rem;">
+<img src="..." class="card-img-top" alt="...">
+<h5> class="card-title">Card Title</h5>
+<p class="card-text">blablabl met des exemples</p>
+<a href="#" class="btn btn-primary" > go somewhere</a>
+
+</div>
+-->
